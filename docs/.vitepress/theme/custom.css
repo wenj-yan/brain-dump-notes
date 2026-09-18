@@ -1,10 +1,10 @@
 /* 终端风配色变量 */
 :root {
-  --vp-c-brand-1: #88c0d0 !important;
-  --vp-c-brand-2: #6d9ca8 !important;
-  --vp-c-brand-3: #4d707a !important;
+  --vp-c-brand-1: #6366f1 !important;
+  --vp-c-brand-2: #4f46e5 !important;
+  --vp-c-brand-3: #4338ca !important;
   --vp-home-hero-name-color: transparent !important;
-  --vp-home-hero-name-background: linear-gradient(120deg, #88c0d0, #81a1c1) !important;
+  --vp-home-hero-name-background: linear-gradient(120deg, #6366f1, #ec4899) !important;
 }
 
 /* 全局等宽字体 */
@@ -39,23 +39,21 @@
 
 /* 特性卡片：深色终端窗口感 */
 .VPFeature {
-  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
-  border: 1px solid #00ff9c33;
-  border-radius: 6px;
-  transition: border-color 0.2s, transform 0.2s;
+  background: var(--vp-c-bg-soft) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  border-radius: 8px;
+  transition: border-color 0.25s, transform 0.25s;
 }
 .VPFeature:hover {
-  border-color: #00ff9c;
+  border-color: var(--vp-c-brand-1) !important;
   transform: translateY(-2px);
 }
 .VPFeature .title {
   font-family: var(--vp-font-family-mono);
-  color: var(--vp-c-brand-1);
-  letter-spacing: 0.05em;
+  color: var(--vp-c-brand-1) !important;
 }
 .VPFeature .details {
-  font-family: var(--vp-font-family-mono);
-  color: #8b949e;
+  color: var(--vp-c-text-2) !important;
 }
 .VPFeature .icon {
   font-family: var(--vp-font-family-mono);
