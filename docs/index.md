@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: $ cd notes
-      link: /markdown-examples
+      link: /notes
     - theme: alt
       text: $ ls api-examples
       link: /api-examples
