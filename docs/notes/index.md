@@ -19,6 +19,9 @@ import { withBase } from 'vitepress'
 - [reduction 算子优化](/notes/reduction)
 - [softmax 算子优化](/notes/softmax)
 
+## CANN
+- [Ascend C编程范式与完整流程](/notes/AscendC)
+
 ## 最近更新
 
 <div v-for="p in data" :key="p.url" style="margin: 6px 0">

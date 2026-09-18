@@ -26,10 +26,19 @@ export default defineConfig({
                 { text: '[算子][CUDA]reduction算子优化', link: '/notes/reduction' },
               { text: '[算子][CUDA]softmax算子优化', link: '/notes/softmax' },
               ]
+            },
+            {
+              text: 'CANN',
+              collapsed: false, 
+              items:[
+                { text: '[CANN]AscendC算子开发全流程记录', link: '/notes/AscendC' },
+
+              ]
             }
             
 
           ],
+          
         },
       ],
     },
