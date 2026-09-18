@@ -9,16 +9,26 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'home', link: '/' },
-      { text: 'notes', link: '/notes/' },
+      { text: 'notes', link: '/notes/index.md' },
       { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: {
       '/notes/': [
         {
-          text: '入门',
+          text: '算子设计',
+          collapsed: false, 
           items: [
-            { text: '第一篇笔记', link: '/notes/first' },
+            {
+              text: 'CUDA',
+              collapsed: false, 
+              items:[
+                { text: '[算子][CUDA]reduction算子优化', link: '/notes/reduction' },
+              { text: '[算子][CUDA]softmax算子优化', link: '/notes/softmax' },
+              ]
+            }
+            
+
           ],
         },
       ],

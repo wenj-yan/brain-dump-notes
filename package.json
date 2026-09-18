@@ -1,6 +1,7 @@
 {
   "name": "brain-dump-notes",
   "version": "1.0.0",
+  "type": "module",
   "description": "Tracking my growth 📈",
   "main": "index.js",
   "scripts": {
@@ -16,7 +17,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+
   "bugs": {
     "url": "https://github.com/wenj-yan/brain-dump-notes/issues"
   },
