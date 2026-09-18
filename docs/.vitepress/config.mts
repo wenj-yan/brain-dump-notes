@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Brain Dump Notes",
   description: "记录成长点滴，我的进阶之旅",
+  base: '/brain-dump-notes/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -26,7 +27,7 @@ export default defineConfig({
     search: { provider: 'local' },          // 免配置全文搜索
     outline: { level: [2, 3], label: '本页目录' },
     editLink: {
-      pattern: 'https://github.com/你的用户名/my-notes/edit/main/docs/:path',
+      pattern: 'https://github.com/wenj-yan/brain-dump-notes/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
     lastUpdatedText: '最近更新',
