@@ -1,0 +1,64 @@
+/* 终端风配色变量 */
+:root {
+  --vp-c-brand-1: #88c0d0 !important;
+  --vp-c-brand-2: #6d9ca8 !important;
+  --vp-c-brand-3: #4d707a !important;
+  --vp-home-hero-name-color: transparent !important;
+  --vp-home-hero-name-background: linear-gradient(120deg, #88c0d0, #81a1c1) !important;
+}
+
+/* 全局等宽字体 */
+:root {
+  --vp-font-family-base: "JetBrains Mono", "Fira Code", "Cascadia Code",
+    Consolas, "Courier New", monospace;
+  --vp-font-family-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+}
+
+/* Hero 名字加一点终端闪烁感 */
+.VPHero .name {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* tagline 变成命令行提示符 */
+.VPHero .tagline {
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-brand-1);
+  opacity: 0.9;
+}
+
+/* 按钮做成命令行风格 */
+.VPButton.brand {
+  font-family: var(--vp-font-family-mono);
+  border-radius: 4px;
+}
+.VPButton.alt {
+  font-family: var(--vp-font-family-mono);
+  border-radius: 4px;
+}
+
+/* 特性卡片：深色终端窗口感 */
+.VPFeature {
+  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  border: 1px solid #00ff9c33;
+  border-radius: 6px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.VPFeature:hover {
+  border-color: #00ff9c;
+  transform: translateY(-2px);
+}
+.VPFeature .title {
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-brand-1);
+  letter-spacing: 0.05em;
+}
+.VPFeature .details {
+  font-family: var(--vp-font-family-mono);
+  color: #8b949e;
+}
+.VPFeature .icon {
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-brand-1);
+  font-size: 20px;
+}

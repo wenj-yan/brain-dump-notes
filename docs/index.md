@@ -1,25 +1,28 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "Brain Dump Notes"
   text: "记录成长点滴，我的进阶之旅"
-  tagline: My great project tagline
+  tagline: "> 在右边敲 help 试试"
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: $ cd notes
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: $ ls api-examples
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: ">_"
+    title: "01 · NOTES"
+    details: "成长记录、踩坑日志与思考碎片。"
+  - icon: "{}"
+    title: "02 · CODE"
+    details: "代码片段、配置模板与最佳实践。"
+  - icon: "#!"
+    title: "03 · TOOLS"
+    details: "终端命令、脚本与效率工具清单。"
 ---
 
+<Terminal />

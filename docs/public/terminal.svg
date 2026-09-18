@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" fill="none">
+  <rect x="1" y="1" width="398" height="258" rx="10" fill="#1e1e2e" stroke="#313244" stroke-width="2"/>
+  <rect x="1" y="1" width="398" height="36" rx="10" fill="#313244"/>
+  <rect x="1" y="25" width="398" height="12" fill="#313244"/>
+  <circle cx="26" cy="19" r="6" fill="#f38ba8"/>
+  <circle cx="48" cy="19" r="6" fill="#fab387"/>
+  <circle cx="70" cy="19" r="6" fill="#a6e3a1"/>
+  <text x="20" y="80" font-family="monospace" font-size="14" fill="#a6e3a1">$ whoami</text>
+  <text x="20" y="106" font-family="monospace" font-size="14" fill="#cdd6f4">brain-dump-notes</text>
+  <text x="20" y="140" font-family="monospace" font-size="14" fill="#a6e3a1">$ cat growth.log</text>
+  <text x="20" y="166" font-family="monospace" font-size="14" fill="#cdd6f4">记录成长点滴...</text>
+  <text x="20" y="200" font-family="monospace" font-size="14" fill="#a6e3a1">$ _</text>
+  <rect x="40" y="189" width="8" height="15" fill="#cdd6f4">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
