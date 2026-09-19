@@ -1,3 +1,7 @@
+---
+title: Ascend C编程范式与完整流程
+---
+
 # Ascend C
 
 ## 1.抽象硬件架构

@@ -1,3 +1,7 @@
+---
+title: softmax 算子优化
+---
+
 # `softmax`
 
 ## 写在之前

@@ -10,14 +10,15 @@ function gitDate(file: string): string {
 }
 
 export default createContentLoader('notes/**/*.md', {
+  includeSrc: true,                                 // 不带上 src 就拿不到 h1 兜底
   transform(raw) {
     return raw
       .filter(p => !p.url.endsWith('/'))            // 排除 index.md 自身
       .map(p => {
-        const file = `docs${p.url}.md`
+        const file = `docs${p.url.replace(/\.html$/, '')}.md`   // url 可能带 .html 后缀
         return {
           title: p.frontmatter.title
-            ?? p.src?.match(/^#\s+(.+)$/m)?.[1]     // 没写 title 就取第一个 h1
+            ?? p.src?.match(/^#\s+(.+)$/m)?.[1]?.replace(/`/g, '')   // 没写 title 就取第一个 h1，去掉反引号
             ?? p.url,
           url: p.url,
           date: gitDate(file),
