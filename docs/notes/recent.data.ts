@@ -3,7 +3,7 @@ import { execSync } from 'node:child_process'
 
 function gitDate(file: string): string {
   try {
-    return execSync(`git log -1 --format=%cI -- "${file}"`, { encoding: 'utf-8' }).trim().slice(0, 10)
+    return execSync(`git log -1 --format=%cI --follow -- "${file}"`, { encoding: 'utf-8' }).trim().slice(0, 10)
   } catch {
     return ''
   }

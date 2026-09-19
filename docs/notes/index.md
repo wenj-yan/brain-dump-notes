@@ -14,13 +14,20 @@ import { withBase } from 'vitepress'
 
 ## 算子设计
 
-## CUDA
+### CUDA
 
-- [reduction 算子优化](/notes/reduction)
-- [softmax 算子优化](/notes/softmax)
+- [reduction 算子优化](/notes/operator/cuda/reduction)
+- [softmax 算子优化](/notes/operator/cuda/softmax)
 
-## CANN
-- [Ascend C编程范式与完整流程](/notes/AscendC)
+### CANN
+
+- [Ascend C编程范式与完整流程](/notes/operator/cann/AscendC)
+
+## 量化
+
+### 工具
+
+- [AMCT 量化工具实践记录](/notes/quant/tools/amct)
 
 ## 最近更新
 

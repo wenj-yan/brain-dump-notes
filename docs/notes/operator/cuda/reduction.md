@@ -64,7 +64,7 @@ __global__ void reduction(const float* input, float* output, int N){
 }
 ```
 
-![1](../public/img/1.jpeg)
+![1](../../../public/img/1.jpeg)
 
 ## 算法复杂度
 

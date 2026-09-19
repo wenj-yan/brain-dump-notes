@@ -17,28 +17,37 @@ export default defineConfig({
       '/notes/': [
         {
           text: '算子设计',
-          collapsed: false, 
+          collapsed: false,
           items: [
             {
               text: 'CUDA',
-              collapsed: false, 
-              items:[
-                { text: '[算子][CUDA]reduction算子优化', link: '/notes/reduction' },
-              { text: '[算子][CUDA]softmax算子优化', link: '/notes/softmax' },
+              collapsed: false,
+              items: [
+                { text: '[算子][CUDA]reduction算子优化', link: '/notes/operator/cuda/reduction' },
+                { text: '[算子][CUDA]softmax算子优化', link: '/notes/operator/cuda/softmax' },
               ]
             },
             {
               text: 'CANN',
-              collapsed: false, 
-              items:[
-                { text: '[CANN]AscendC算子开发全流程记录', link: '/notes/AscendC' },
-
+              collapsed: false,
+              items: [
+                { text: '[CANN]AscendC算子开发全流程记录', link: '/notes/operator/cann/AscendC' },
               ]
             }
-            
-
           ],
-          
+        },
+        {
+          text: '量化',
+          collapsed: false,
+          items: [
+            {
+              text: '工具',
+              collapsed: false,
+              items: [
+                { text: '[量化][工具]AMCT量化工具实践记录', link: '/notes/quant/tools/amct' },
+              ]
+            },
+          ],
         },
       ],
     },
