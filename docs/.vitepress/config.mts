@@ -1,16 +1,22 @@
 import { defineConfig } from 'vitepress'
 
+const base = '/brain-dump-notes/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Brain Dump Notes",
   description: "记录成长点滴，我的进阶之旅",
-  base: '/brain-dump-notes/',
+  base,
+  lastUpdated: true,
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}terminal.svg` }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'home', link: '/' },
-      { text: 'notes', link: '/notes/index.md' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '首页', link: '/' },
+      { text: '笔记', link: '/notes/' },
+      { text: '博客', link: '/blog/' },
+      { text: '日志', link: '/daily/' },
+      { text: '关于', link: '/about' }
     ],
 
     sidebar: {
@@ -60,10 +66,12 @@ export default defineConfig({
     },
     lastUpdatedText: '最近更新',
     docFooter: { prev: '上一篇', next: '下一篇' },
+    footer: {
+      message: '记录成长点滴，我的进阶之旅',
+      copyright: 'Powered by VitePress',
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wenj-yan/brain-dump-notes' },
     ],
-
-    
   }
 })

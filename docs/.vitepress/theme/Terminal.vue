@@ -32,6 +32,15 @@
 
 <script setup>
 import { ref, nextTick, onMounted } from 'vue'
+import { withBase } from 'vitepress'
+
+/** 站内可以 cd 进去的板块 */
+const sites = {
+  notes: { path: '/notes/', desc: '学习笔记：算子设计、量化、模型部署……' },
+  blog: { path: '/blog/', desc: '技术文章与随笔，成篇的思考' },
+  daily: { path: '/daily/', desc: '日常记录，按天沉淀' },
+  about: { path: '/about.html', desc: '关于我：研究方向与联系方式' },
+}
 
 const lines = ref([
   { type: 'out', text: 'Welcome to <b>brain-dump-notes</b> terminal.' },
@@ -45,33 +54,44 @@ const bodyRef = ref(null)
 const history = ref([])
 const historyIndex = ref(-1)
 
+/** 生成一个可以点的站内链接 */
+function link(name) {
+  return `<a class="link" href="${withBase(sites[name].path)}">${name}</a>`
+}
+
+function go(name) {
+  if (!sites[name]) return [`cd: no such directory: ${name}`]
+  window.location.href = withBase(sites[name].path)
+  return []
+}
+
 const commands = {
   help: () => [
     'Available commands:',
-    '  <span class="hl">help</span>      show this help',
-    '  <span class="hl">ls</span>        list sections',
-    '  <span class="hl">cat</span> &lt;file&gt;  read a section',
-    '  <span class="hl">whoami</span>    about me',
-    '  <span class="hl">date</span>      current time',
-    '  <span class="hl">clear</span>     clear screen',
+    '  <span class="hl">ls</span>            list sections',
+    '  <span class="hl">cd</span> &lt;dir&gt;      jump to a section',
+    '  <span class="hl">cat</span> &lt;dir&gt;     what is inside',
+    '  <span class="hl">whoami</span>        about me',
+    '  <span class="hl">date</span>          current time',
+    '  <span class="hl">clear</span>         clear screen',
   ],
-  ls: () => [
-    '<span class="dir">markdown-examples/</span>  <span class="dir">api-examples/</span>  <span class="file">README.md</span>',
-  ],
-  whoami: () => ['brain-dump-notes — 记录成长点滴，我的进阶之旅'],
-  date: () => [new Date().toString()],
+  ls: () =>
+    Object.keys(sites).map(
+      (name) => `  ${link(name)}${name === 'about' ? '' : '/'}  <span class="dim">${sites[name].desc}</span>`,
+    ),
+  cd: (args) => {
+    if (!args[0]) return ['cd: missing directory operand']
+    return go(args[0])
+  },
   cat: (args) => {
     const target = args[0]
     if (!target) return ['cat: missing file operand']
-    const files = {
-      'README.md': '记录成长点滴，我的进阶之旅。',
-      'markdown-examples': 'Markdown 示例，见 /markdown-examples',
-      'api-examples': 'API 示例，见 /api-examples',
-    }
-    return files[target]
-      ? [files[target]]
+    return sites[target]
+      ? [`${link(target)} — <span class="dim">${sites[target].desc}</span>`]
       : [`cat: ${target}: No such file or directory`]
   },
+  whoami: () => ['计算机专业研究生 · 记录成长点滴，我的进阶之旅'],
+  date: () => [new Date().toString()],
 }
 
 async function run() {
@@ -88,8 +108,7 @@ async function run() {
   if (cmd === 'clear') {
     lines.value = []
   } else if (commands[cmd]) {
-    const out = commands[cmd](args)
-    out.forEach((t) => lines.value.push({ type: 'out', text: t }))
+    commands[cmd](args).forEach((t) => lines.value.push({ type: 'out', text: t }))
   } else {
     lines.value.push({
       type: 'out',
@@ -157,7 +176,7 @@ onMounted(() => {
 .terminal-title {
   margin-left: 8px;
   font-size: 12px;
-  color: #7f849c;
+  color: #9399b2;
 }
 
 .terminal-body {
@@ -184,8 +203,9 @@ onMounted(() => {
 
 .out :deep(.hl) { color: #89b4fa; }
 .out :deep(.err) { color: #f38ba8; }
-.out :deep(.dir) { color: #89b4fa; }
-.out :deep(.file) { color: #f9e2af; }
+.out :deep(.dim) { color: #6c7086; }
+.out :deep(.link) { color: #f9e2af; text-decoration: underline; }
+.out :deep(.link:hover) { color: #fab387; }
 .out :deep(b) { color: #cba6f7; }
 
 .input-line {

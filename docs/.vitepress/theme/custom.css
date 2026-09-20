@@ -1,10 +1,18 @@
 /* 终端风配色变量 */
 :root {
-  --vp-c-brand-1: #6366f1 !important;
-  --vp-c-brand-2: #4f46e5 !important;
-  --vp-c-brand-3: #4338ca !important;
+  --vp-c-brand-1: #4f46e5 !important;
+  --vp-c-brand-2: #4338ca !important;
+  --vp-c-brand-3: #3730a3 !important;
   --vp-home-hero-name-color: transparent !important;
-  --vp-home-hero-name-background: linear-gradient(120deg, #6366f1, #ec4899) !important;
+  --vp-home-hero-name-background: linear-gradient(120deg, #4f46e5, #db2777) !important;
+}
+
+/* 深色模式下换成亮一档的靛蓝，保证正文/卡片标题对比度 */
+.dark {
+  --vp-c-brand-1: #a5b4fc !important;
+  --vp-c-brand-2: #818cf8 !important;
+  --vp-c-brand-3: #6366f1 !important;
+  --vp-home-hero-name-background: linear-gradient(120deg, #a5b4fc, #f9a8d4) !important;
 }
 
 /* 全局等宽字体 */
@@ -24,7 +32,7 @@
 .VPHero .tagline {
   font-family: var(--vp-font-family-mono);
   color: var(--vp-c-brand-1);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* 按钮做成命令行风格 */
@@ -59,4 +67,28 @@
   font-family: var(--vp-font-family-mono);
   color: var(--vp-c-brand-1);
   font-size: 20px;
+}
+
+/* ---- 首页正文区 ---- */
+/* 收窄内容宽度，卡片和终端不至于铺满整屏 */
+.VPHome .vp-doc.container {
+  max-width: 1024px !important;
+}
+
+/* 首页小标题做成命令行提示符的样子 */
+.VPHome .vp-doc h2 {
+  margin-top: 48px !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+  font-family: var(--vp-font-family-mono);
+  font-size: 20px;
+}
+.VPHome .vp-doc h2::before {
+  content: "$ ";
+  color: var(--vp-c-brand-1);
+}
+
+/* 首页卡片之间的留白 */
+.VPHome .VPFeatures {
+  padding-bottom: 0 !important;
 }
