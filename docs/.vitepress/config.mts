@@ -22,6 +22,19 @@ export default defineConfig({
     sidebar: {
       '/notes/': [
         {
+          text: 'vllm-omni',
+          collapsed: false,
+          items: [
+            {
+              text: 'PR思路学习',
+              collapsed: false,
+              items: [
+                { text: 'MiniMax-H3 的 MXFP8 量化与 SwiGLU 融合优化——PR#7988', link: '/notes/vllm-omni/PR思路学习/minimax-h3-mxfp8-pr-7988' },
+              ]
+            },
+          ],
+        },
+        {
           text: '算子设计',
           collapsed: false,
           items: [

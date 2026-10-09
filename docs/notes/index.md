@@ -28,6 +28,12 @@ import { data } from './recent.data'
 
 - [AMCT 量化工具实践记录](/notes/quant/tools/amct)
 
+## vllm-omni
+
+### PR思路学习
+
+- [MiniMax-H3 的 MXFP8 量化与 SwiGLU 融合优化——PR#7988](/notes/vllm-omni/PR思路学习/minimax-h3-mxfp8-pr-7988)
+
 ## 最近更新
 
 <PostList :posts="data" compact />
