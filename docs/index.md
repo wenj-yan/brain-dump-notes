@@ -1,49 +1,47 @@
 ---
-layout: home
-
-hero:
-  name: "Brain Dump Notes"
-  text: "记录成长点滴，我的进阶之旅"
-  tagline: "> 一个计算机研究生的笔记 / 博客 / 日志"
-  actions:
-    - theme: brand
-      text: $ cd notes
-      link: /notes/
-    - theme: alt
-      text: $ ls blog
-      link: /blog/
-
-features:
-  - icon: "📒"
-    title: Notes
-    details: "系统整理的学习笔记：算子设计、量化、模型部署……"
-    link: /notes/
-    linkText: cd notes
-  - icon: "✍️"
-    title: Blog
-    details: "成篇的技术文章与随笔，记录踩过的坑和想清楚的事。"
-    link: /blog/
-    linkText: 读文章
-  - icon: "🗓️"
-    title: Daily
-    details: "科研、刷题、读书的日常碎片，按时间沉淀。"
-    link: /daily/
-    linkText: 看日志
-  - icon: "🫧"
-    title: About
-    details: "我是谁、在做什么、怎么联系我。"
-    link: /about
-    linkText: 认识一下
+title: 笔记目录
+aside: false
+editLink: false
+lastUpdated: false
 ---
 
 <script setup>
 import { data } from './recent.data'
 </script>
 
+# 笔记目录
+
+这里是我的学习笔记，按主题分类整理，持续更新中。
+
+## 算子设计
+
+### CUDA
+
+- [reduction 算子优化](/notes/operator/cuda/reduction)
+- [softmax 算子优化](/notes/operator/cuda/softmax)
+
+### CANN
+
+- [Ascend C 编程范式与完整流程](/notes/operator/cann/AscendC)
+
+## 量化
+
+### 工具
+
+- [AMCT 量化工具实践记录](/notes/quant/tools/amct)
+
+## vllm-omni
+
+### PR思路学习
+
+- [MiniMax-H3 的 MXFP8 量化与 SwiGLU 融合优化——PR#7988](/notes/vllm-omni/PR思路学习/minimax-h3-mxfp8-pr-7988)
+
+## verl-omni
+
+### PR思路学习
+
+- [如何为 verl-omni 增加 DGPO 算法](/notes/verl-omni/PR思路学习/verl-omni-dgpo-pr-733)
+
 ## 最近更新
 
 <PostList :posts="data" compact />
-
-## 终端
-
-<Terminal />

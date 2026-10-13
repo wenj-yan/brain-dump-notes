@@ -4,11 +4,9 @@ import { byDateDesc, toPost } from './.vitepress/utils/posts'
 /** 首页「最近更新」覆盖的板块 */
 const sections = [
   { prefix: '/notes/', label: '笔记' },
-  { prefix: '/blog/', label: '博客' },
-  { prefix: '/daily/', label: '日志' },
 ]
 
-export default createContentLoader(['notes/**/*.md', 'blog/**/*.md', 'daily/**/*.md'], {
+export default createContentLoader('notes/**/*.md', {
   includeSrc: true,
   transform(raw) {
     return raw
