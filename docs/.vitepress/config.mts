@@ -22,6 +22,19 @@ export default defineConfig({
     sidebar: {
       '/notes/': [
         {
+          text: 'verl-omni',
+          collapsed: false,
+          items: [
+            {
+              text: 'PR思路学习',
+              collapsed: false,
+              items: [
+                { text: '如何为 verl-omni 增加 DGPO 算法', link: '/notes/verl-omni/PR思路学习/verl-omni-dgpo-pr-733' },
+              ]
+            },
+          ],
+        },
+        {
           text: 'vllm-omni',
           collapsed: false,
           items: [

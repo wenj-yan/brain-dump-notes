@@ -34,6 +34,12 @@ import { data } from './recent.data'
 
 - [MiniMax-H3 的 MXFP8 量化与 SwiGLU 融合优化——PR#7988](/notes/vllm-omni/PR思路学习/minimax-h3-mxfp8-pr-7988)
 
+## verl-omni
+
+### PR思路学习
+
+- [如何为 verl-omni 增加 DGPO 算法](/notes/verl-omni/PR思路学习/verl-omni-dgpo-pr-733)
+
 ## 最近更新
 
 <PostList :posts="data" compact />
