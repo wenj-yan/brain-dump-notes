@@ -42,6 +42,8 @@ import { data } from './recent.data'
 
 - [如何为 verl-omni 增加 DGPO 算法](/notes/verl-omni/PR思路学习/verl-omni-dgpo-pr-733)
 
+## paper read
+
 ## 最近更新
 
 <PostList :posts="data" compact />

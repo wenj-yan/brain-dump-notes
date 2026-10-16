@@ -12,6 +12,10 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
+          text: 'paper read',
+          items: [],
+        },
+        {
           text: 'verl-omni',
           collapsed: false,
           items: [
